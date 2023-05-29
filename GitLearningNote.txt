@@ -5,12 +5,18 @@ https://www.udemy.com/course/unscared_git/?couponCode=CE1612C1A2AF2D02E5D9
 ------------------------------
 以下、( ..)φメモメモ
 ------------------------------
-// バージョン管理を始めるにはinit
-// 対象ディレクトリへ移動して以下実行する
+// バージョン管理を始める
+// 対象ディレクトリへ移動して以下実行
 git init
 
+// 追加・修正コマンド
 git add xxx.txt
 git commit
+
+// 削除コマンド
+git rm xxx.txt
+git commit
+
 
 ***vimエディタ***
 i→コメント→ESC→:wq
@@ -20,19 +26,68 @@ gitHubでリポジトリを作成
 
 
 **********************
-コミットメモ（このように書くと良いよ）
+コミットメモ
 **********************
 ○変更内容の要約
 ・変更理由１
 ・変更理由２
 **********************
-// 状態を確認するcommand
+// Gitリポジトリの状態表示
 git status
-// commitなどの履歴を確認できる
 git log
+// 移動はj,k qで終了
+
+// 表示形式を指定できる
+git log --oneline
+git log -n 3
+git log --oneline -n 3
+
+// 変更履歴を見れる
+git log -p
+git log -p test.txt
+
+
+// 変更差分を確認する
+// ローカルの状態とステージングの差分
+git diff
+// ステージングとローカルリポジトリの差分
+git diff head
+
+
+// [https://github.com/nishiohayou/intro_git]でもいける
+git remote add origin https://github.com/nishiohayou/intro_git.git
+git push origin main
+
+
+// git remote add ？
+git remote addコマンドで、リモートリポジトリをローカルリポジトリに登録できる。
+
+// .gitignoreファイルの書き方
+# #から始まる行はコメント
+# 指定したファイルを除外
+index.html
+
+# ルートディレクトリを指定
+/root.html
+
+# ディレクトリ以下を除外
+dir/
 
 
 
+//コミットしたファイルを管理から外す
+# ファイルも一緒に削除
+git rm [ファイル名]
+# ディレクトリも一緒に削除
+git rm -r [ディレクトリ]
+# ファイルは残す
+git rm --cache [ファイル名]
+⇒この後は、「.gitignore」に追記する
 
-
-
+// 確認【★繰り返して理解する】
+git status
+// 戻せる
+git reset head [ファイル名]
+git checkout [ファイル名]
+// 再確認【★繰り返して理解する】
+git status
