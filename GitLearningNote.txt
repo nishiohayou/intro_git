@@ -25,6 +25,8 @@ gitHubでリポジトリを作成
 **********************
 // 状態を確認するcommand
 git status
+// commitなどの履歴を確認できる
+git log
 
 
 
