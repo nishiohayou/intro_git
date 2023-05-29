@@ -1,4 +1,7 @@
 ◆Gitについて、基本的なワークフローを学ぶ
+https://www.udemy.com/course/intro_git/learn/lecture/6953312#overview
+▼ こちらのURLから受講できます。1,610円（85%オフ）
+https://www.udemy.com/course/unscared_git/?couponCode=CE1612C1A2AF2D02E5D9
 ------------------------------
 以下、( ..)φメモメモ
 ------------------------------
